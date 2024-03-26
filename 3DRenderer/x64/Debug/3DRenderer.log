@@ -1,0 +1,85 @@
+﻿  3DRenderer.cpp
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(244,21): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(246,16): warning C4244: 'inicializando': conversão de 'double' para 'float', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(674,13): warning C4244: 'inicializando': conversão de '_Ty1' para 'float', possível perda de dados
+          with
+          [
+              _Ty1=int
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(675,13): warning C4244: 'inicializando': conversão de '_Ty2' para 'float', possível perda de dados
+          with
+          [
+              _Ty2=int
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(676,32): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(676,62): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(676,66): warning C4244: 'argumento': conversão de '_Ty2' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(676,36): warning C4244: 'argumento': conversão de '_Ty1' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(677,32): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(677,62): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(677,66): warning C4244: 'argumento': conversão de '_Ty2' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty2=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(677,36): warning C4244: 'argumento': conversão de '_Ty1' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty1=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(700,14): warning C4244: 'inicializando': conversão de '_Ty1' para 'float', possível perda de dados
+          with
+          [
+              _Ty1=int
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(701,14): warning C4244: 'inicializando': conversão de '_Ty2' para 'float', possível perda de dados
+          with
+          [
+              _Ty2=int
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,33): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,60): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,87): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,93): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,66): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(703,39): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,33): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,60): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,87): warning C4244: 'argumento': conversão de 'float' para 'const unsigned __int64', possível perda de dados
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,93): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,66): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\3DRenderer.cpp(704,39): warning C4244: 'argumento': conversão de '_Ty' para 'GLfloat', possível perda de dados
+          with
+          [
+              _Ty=double
+          ]
+  3DRenderer.vcxproj -> C:\Users\vitor\source\repos\3DRenderer\x64\Debug\3DRenderer.exe
+          1 arquivo(s) copiado(s).

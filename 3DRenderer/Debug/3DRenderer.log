@@ -1,0 +1,9 @@
+﻿  3DRenderer.cpp
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp__glutInitWindowSize@8, referenciado na função _main
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp__glutMainLoop@0, referenciado na função _main
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp__glutKeyboardFunc@4, referenciado na função _main
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp__glutDisplayFunc@4, referenciado na função _main
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp____glutInitWithExit@12, referenciado na função _glutInit_ATEXIT_HACK@8
+3DRenderer.obj : error LNK2019: símbolo externo não resolvido, __imp____glutCreateWindowWithExit@8, referenciado na função _glutCreateWindow_ATEXIT_HACK@4
+C:\Users\vitor\source\repos\3DRenderer\3DRenderer\freeglut\lib\x64\freeglut.lib : warning LNK4272: o tipo de máquina da biblioteca 'x64' está em conflito com o tipo de máquina de destino 'x86'
+C:\Users\vitor\source\repos\3DRenderer\Debug\3DRenderer.exe : fatal error LNK1120: 6 externo não resolvidos
