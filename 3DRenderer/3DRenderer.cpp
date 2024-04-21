@@ -3,6 +3,7 @@
 #include <vector>
 using vertice = std::pair<double, double>;
 using vertice3D = std::vector<double>;
+using rotacao3D = std::vector<double>;
 using lista_vertices = std::vector<vertice>;
 using lista_vertices3D = std::vector<vertice3D>;
 using aresta = std::pair<int, int>;
@@ -30,7 +31,7 @@ struct Poligono3D {
 	int numArestasPorLado;
 	vertice3D posicao;
 	vertice3D escala;
-	double rotacao;
+	rotacao3D rotacao;
 	lista_vertices3D vertices;
 	lista_lados lados;
 };
@@ -44,7 +45,7 @@ void movimentar3D(Poligono3D& poligono, double distancia, int direcao);
 void escalar(Poligono& poligono, double escala_x, double escala_y);
 void escalar3D(Poligono3D& poligono, double escala_x, double escala_y, double escala_z);
 void rotacionar(Poligono& poligono, double angulo);
-void rotacionar3D(Poligono3D& poligono, double angulo_x, double angulo_y, double angulo_z);
+void rotacionar3D(Poligono3D& poligono);
 void display();
 void display3D();
 void redraw(int value);
@@ -167,6 +168,24 @@ void keyboard3D(unsigned char key, int x, int y) {
 	case 'q':
 		movimentar3D(cubo, 0.1, 6);
 		break;
+	case '1':
+		movimentar3D(cubo, 0.005, 7);
+		break;
+	case '2':
+		movimentar3D(cubo, 0.005, 8);
+		break;
+	case '4':
+		movimentar3D(cubo, 0.005, 9);
+		break;
+	case '5':
+		movimentar3D(cubo, 0.005, 10);
+		break;
+	case '7':
+		movimentar3D(cubo, 0.005, 11);
+		break;
+	case '8':
+		movimentar3D(cubo, 0.005, 12);
+		break;
 	}
 }
 
@@ -191,7 +210,6 @@ void keyboard_special(int key, int x, int y) {
 
 	}
 }
-
 
 
 void keyboard_special3D(int key, int x, int y) {
@@ -223,7 +241,7 @@ void redraw(int value) {
 }
 
 void redraw3D(int value) {
-	rotacionar3D(cubo, 0.01, 0.01, 0.01);
+	rotacionar3D(cubo);
 	glutPostRedisplay();
 	glutTimerFunc(delay, redraw3D, 0);
 }
@@ -281,7 +299,9 @@ Poligono3D criar_cubo(double posicao_x, double posicao_y, double posicao_z, doub
 	novo_poligono.escala.push_back(1);
 	novo_poligono.escala.push_back(1);
 
-	novo_poligono.rotacao = 0;
+	novo_poligono.rotacao.push_back(0);
+	novo_poligono.rotacao.push_back(0);
+	novo_poligono.rotacao.push_back(0);
 
 	std::cout << "Vertices:\n";
 
@@ -580,6 +600,31 @@ void movimentar3D(Poligono3D& poligono, double distancia, int direcao) {
 			poligono.vertices[i][2] = poligono.vertices[i][2] - distancia;
 		}
 		break;
+
+	case 7:
+		poligono.rotacao[0] = poligono.rotacao[0] + distancia;
+		break;
+
+	case 8:
+		poligono.rotacao[0] = poligono.rotacao[0] - distancia;
+		break;
+
+	case 9:
+		poligono.rotacao[1] = poligono.rotacao[1] + distancia;
+		break;
+
+	case 10:
+		poligono.rotacao[1] = poligono.rotacao[1] - distancia;
+		break;
+
+	case 11:
+		poligono.rotacao[2] = poligono.rotacao[2] + distancia;
+		break;
+
+	case 12:
+		poligono.rotacao[2] = poligono.rotacao[2] - distancia;
+		break;
+
 	}
 }
 
@@ -641,11 +686,17 @@ void rotacionar(Poligono& poligono, double angulo) {
 	}
 
 }
-void rotacionar3D(Poligono3D& poligono, double angulo_x, double angulo_y, double angulo_z) {
+void rotacionar3D(Poligono3D& poligono) {
 	//X’ = X +  * cos ɵ - Y * sin ɵ;
 	//Y’ = X * sin ɵ + Y * cos ɵ;
 	//Z’ = X * sin ɵ + Y * cos ɵ;
-	poligono.rotacao = poligono.rotacao + angulo_x;
+	//poligono.rotacao = poligono.rotacao + angulo_x;
+
+	double angulo_x = poligono.rotacao[1];
+	
+	double angulo_y = poligono.rotacao[0];
+		
+	double angulo_z = poligono.rotacao[2];
 
 	for (int i = 0; i < poligono.vertices.size(); i++) {
 		poligono.vertices[i][0] = poligono.vertices[i][0] - poligono.posicao[0];
@@ -658,7 +709,7 @@ void rotacionar3D(Poligono3D& poligono, double angulo_x, double angulo_y, double
 
 		poligono.vertices[i][0] = x * cos(angulo_y) * cos(angulo_z) + y * (sin(angulo_x) * sin(angulo_y) * cos(angulo_z) - cos(angulo_x) * sin(angulo_z)) + z * (cos(angulo_x) * sin(angulo_y) * cos(angulo_z) + sin(angulo_x) * sin(angulo_z));
 		poligono.vertices[i][1] = x * cos(angulo_y) * sin(angulo_z) + y * (sin(angulo_x) * sin(angulo_y) * sin(angulo_z) + cos(angulo_x) * cos(angulo_z)) + z * (cos(angulo_x) * sin(angulo_y) * sin(angulo_z) - sin(angulo_x) * cos(angulo_z));
-		poligono.vertices[i][2] = x * -sin(angulo_y) * cos(angulo_z) + y * (sin(angulo_x) * cos(angulo_y)) +	z * (cos(angulo_x) * cos(angulo_y));
+		poligono.vertices[i][2] = x * -sin(angulo_y) * cos(angulo_z) + y * (sin(angulo_x) * cos(angulo_y)) + z * (cos(angulo_x) * cos(angulo_y));
 
 		poligono.vertices[i][0] = poligono.vertices[i][0] + poligono.posicao[0];
 		poligono.vertices[i][1] = poligono.vertices[i][1] + poligono.posicao[1];
@@ -690,11 +741,15 @@ void desenhar3D (Poligono3D poligono) {
 
 	cores Cores = { Verde, Laranja, Vermelho, Amarelo, Azul, Magenta };
 
-	glBegin(GL_QUADS);
+	GLfloat CorLinha[1][3] = {
+	{0.0f, 1.0f, 0.0f}    // Green
+	};
+
+	glBegin(GL_LINES);
 	for (int lado = 0; lado < poligono.lados.size(); lado++) {
 		
 
-		glColor3f(Cores[lado][0], Cores[lado][1], Cores[lado][2]); 
+		glColor3fv(CorLinha[0]);
 		for (int aresta = 0; aresta < poligono.lados[lado].size(); aresta++) {
 
 			float v_o = poligono.lados[lado][aresta].first;
